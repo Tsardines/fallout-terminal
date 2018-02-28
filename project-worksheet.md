@@ -89,12 +89,16 @@ Include images of your wireframes.
 
 ### Landing Page
 
-![Landing Page](https://i.imgur.com/tWjUXoD.jpg =250x250)
+<img src="https://i.imgur.com/tWjUXoD.jpg" alt="alt text" width="200" height="400">
 
 
 ### Game Initialization
 
+<img src="https://i.imgur.com/oIxpalm.jpg" alt="alt text" width="200" height="400">
 
+
+
+<img src="https://i.imgur.com/O2nTwkp.jpg" alt="alt text" width="400" height="200">
 
 
 
