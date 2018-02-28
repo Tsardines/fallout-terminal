@@ -26,14 +26,22 @@ Use this section to describe your final project and perhaps any links to relevan
 - Game logic:
   - Taking random words from words array
   - Taking random characters from chars array
+  - Have program compare your selected with word to goal word
+  - You select "CLEAR". The goal word is "ROACH." 
+  - "Entry denied. 3/5 correct."
+  - onClick event for selecting words
 
 2. Important but not urgent:
-- Game logic:
-  -
+ - Font size
+ - Color scheme (amber)
 
-3. Not Important but urgent:
+
+3. Not important but urgent:
+- Game logic:
+  - Generate rowStarts from rowStarts array ( ["0xN0H3", "0xN0H4", "0xN0H2"] etc. )
 
 4. Not important and not urgent:
+- General CSS
 
 ## MVP
 
