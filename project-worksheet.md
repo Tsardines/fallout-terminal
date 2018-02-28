@@ -18,7 +18,22 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality
+I'm interested in recreating a hacking mini-game from the popular video game title, Fallout 3.
+
+You're presented with four columns containing fifteen to seventeen rows each. Each row is populated by randomly generated characters and one randomly generated word, and there is one word per line. The words don't have a specific theme, but they all have the same amount of letters. For my version, each word will have six.
+
+The computer will randomly pick one of those words to be its passcode, and you're given four attempts to click and select it. Upon making an incorrect choice you're told that 1. That your answer was incorrect, and 2. How many letters in your choice matched those in the right passcode. The start of the game shows the line "Four attempts remaining" with four blinking boxes next to it. By the time you're down to one more life, the line reads "one attempt remaining" with one blinking box.
+
+As an example, assume that the computer has randomly selected the word "NIMBUS" as its passcode. If you select the word "RABIES", you're informed that 3/6 letters matched the answer.
+
+After those four attempts, the computer regenerates the characters and words (Math.random) and has chosen a new passcode. So technically, it would be possible to play many rounds without selecting the correct word.
+
+The mini-game occasionally shows a < or two. Selecting one will remove one of the wrong answers at random. If there happen to be 9 randomly generated < characters, you'll be able to remove 9 wrong words at random. This is not in the player instructions, so it would be up to them to stumble across it.
+
+In Fallout 3, unlocking the correct password means getting access to the computer that you're trying to hack. In my version of the mini-game, however, the only thing you can really win is the feeling of success.
+
+Here's a screenshot from Fallout 3. The red boxes and text were not created by me, but they help illustrate the point about getting a certain amount of letters right.
+![image](https://git.generalassemb.ly/storage/user/9432/files/57f9e028-1c63-11e8-8e86-7cf2f54ea161)
 
 ## Priority Matrix
 
@@ -32,9 +47,10 @@ Use this section to describe your final project and perhaps any links to relevan
   - onClick event for selecting words
 
 2. Important but not urgent:
- - Font size
+ - Font and font size
  - Color scheme (amber)
-
+ - User typing their first name on landing page
+ - User's name reappearing on win page
 
 3. Not important but urgent:
 - Game logic:
@@ -42,14 +58,23 @@ Use this section to describe your final project and perhaps any links to relevan
 
 4. Not important and not urgent:
 - General CSS
+  - Screen display
+  - 
 
 ## MVP
 
-Include the full list of features that will be part of your MVP
+User will be able to:
+  - Interact with the power button (start and reset game)
+  - Input their name (landing page)
+  - Click and select words from choices
+  - 
 
 ## POST MVP
 
-Include the full list of features that you are considering for POST MVP
+- Seeing characters between <> would either A. Replenish lives/attempts or B. Randomly remove bad words
+- Key clacks and beeping (i.e. error) sound effects
+- Dictionary API
+- Easy/Medium/Hard difficulty levels (hard = longer words)
 
 ## Wireframes
 
@@ -58,10 +83,14 @@ Include images of your wireframes.
 ## Game Components
 
 ### Landing Page
-What will a player see when they start your game?
+
+
+
 
 ### Game Initialization
-What will a player see when the game is started?
+
+
+
 
 ### Playing The Game
 What will be the flow of the game, what will the user be expected to do and what will the user expect from the gam
@@ -70,7 +99,7 @@ What will be the flow of the game, what will the user be expected to do and what
 What does it look like when the game ends, what determines winning or losing?
 
 ### Game Reset
-How will the user restart the game once it has been completed.
+The user will be able to restart the game by clicking on the power dial at the bottom of the screen.
 
 ## Functional Components
 
