@@ -140,7 +140,7 @@ Based on the initial logic defined in the previous game phases section try and b
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
 
-# Dividing the Game
+## Dividing the Game
 
 I divided the logic of the game into five areas:
 
@@ -148,15 +148,30 @@ I divided the logic of the game into five areas:
 - case/switch for different options (5 options: 4 for the attempts and 1 for game over)
 
 2. rowStarts
+- var rowStarts = ["0xN0H4", "0xN0H6", "0xN0H1"]...etc
+- Math.floor(Math.random()
+- Empty array(s)?
 
 3. Random chars
+- var garbage = ["!", "%", "<", ")", ]...etc
+- Math.floor(Math.random()
+- Empty array?
+  - push from var garbage into newArr
 
 4. Random words
+- var words = ["NIMBUS", "CLEARS", "CHURCH", "WRITES", ]...etc
+- Math.floor(Math.random()
+- Empty array?
+  - push from var words into newArr
 
 5. User guesses and correct letters
-
-
-
+- Need to check:
+  1. That they're the same object type
+  2. They have the same # of items
+- Object.is(value1, value2)
+  - Determines equality of two values
+- string.split(), then compare
+- forEach (loop over each letter)
 
 
 
