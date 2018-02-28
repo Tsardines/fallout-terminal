@@ -22,7 +22,18 @@ Use this section to describe your final project and perhaps any links to relevan
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matix.
+1. Important & urgent:
+- Game logic:
+  - Taking random words from words array
+  - Taking random characters from chars array
+
+2. Important but not urgent:
+- Game logic:
+  -
+
+3. Not Important but urgent:
+
+4. Not important and not urgent:
 
 ## MVP
 
@@ -34,7 +45,7 @@ Include the full list of features that you are considering for POST MVP
 
 ## Wireframes
 
-Include images of your wireframes. 
+Include images of your wireframes.
 
 ## Game Components
 
@@ -42,7 +53,7 @@ Include images of your wireframes.
 What will a player see when they start your game?
 
 ### Game Initialization
-What will a player see when the game is started? 
+What will a player see when the game is started?
 
 ### Playing The Game
 What will be the flow of the game, what will the user be expected to do and what will the user expect from the gam
@@ -55,9 +66,9 @@ How will the user restart the game once it has been completed.
 
 ## Functional Components
 
-Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method. 
+Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method.
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. 
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
@@ -66,12 +77,12 @@ Time frames are also key in the development cycle.  You have limited time to cod
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
-| Function | Description | 
+| Function | Description |
 | --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string | 
+| Capitalize | This will capitalize the first letter in a string |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ Use this section to list all supporting libraries and thier role in the project.
 
 ## jQuery Discoveries
  Use this section to list some, but not all, of the jQuery methods and\or functionality discovered while working on this project.
