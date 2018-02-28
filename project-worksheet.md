@@ -35,8 +35,8 @@ In summation:
 
 In Fallout 3, unlocking the correct password means getting access to the computer that you're trying to hack. In my version of the mini-game, however, the only thing you can really win is the feeling of success.
 
-Here's a screenshot from Fallout 3. The red boxes and text were not created by me, but they help illustrate the point about getting a certain amount of letters right.
-![image](https://git.generalassemb.ly/storage/user/9432/files/57f9e028-1c63-11e8-8e86-7cf2f54ea161)
+Here's a screenshot from Fallout 3.
+<img src="https://i.ytimg.com/vi/1iM12XyQPJE/maxresdefault.jpg" alt="alt text">
 
 And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working recreation of the game. At some point in the future, I'd like my game to resemble this one.
 
@@ -83,13 +83,20 @@ User will be able to:
 
 ## Wireframes
 
-Include images of your wireframes.
+I've inserted the wireframes below.
 
 ## Game Components
 
 ### Landing Page
 
 <img src="https://i.imgur.com/tWjUXoD.jpg" alt="alt text" width="200" height="400">
+
+1. Shows a blank computer screen.
+2. User clicks on the "power dial" 
+3. Landing 2 appears.
+4. Prompt: "Please enter your first name" with an input box below.
+5. User types their first name and clicks on the "GO" button adjacent to it
+6. Taken to Landing 3.
 
 
 ### Game Initialization
