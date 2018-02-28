@@ -18,17 +18,20 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-I'm interested in recreating a hacking mini-game from the popular video game title, Fallout 3.
+I'm interested in recreating the hacking mini-game from the popular video game title, Fallout 3.
 
 You're presented with four columns containing fifteen to seventeen rows each. Each row is populated by randomly generated characters and one randomly generated word, and there is one word per line. The words don't have a specific theme, but they all have the same amount of letters. For my version, each word will have six.
 
-The computer will randomly pick one of those words to be its passcode, and you're given four attempts to click and select it. Upon making an incorrect choice you're told that 1. That your answer was incorrect, and 2. How many letters in your choice matched those in the right passcode. The start of the game shows the line "Four attempts remaining" with four blinking boxes next to it. By the time you're down to one more life, the line reads "one attempt remaining" with one blinking box.
+The computer will randomly pick one of those words to be its passcode, and you're given four attempts to click and select it. Upon making an incorrect choice you're told that: your answer was incorrect, and how many letters in your choice matched those in the right passcode. The start of the game shows the line "Four attempts remaining" with four blinking boxes next to it. By the time you're down to one more life, the line reads "One attempt remaining! Lock down pending" with one blinking box.
 
-As an example, assume that the computer has randomly selected the word "NIMBUS" as its passcode. If you select the word "RABIES", you're informed that 3/6 letters matched the answer.
+As an example, when the game begins the board is populated by rows, and each row contains one word. The game looks at those words and randomly selects the word "NIMBUS" as its passcode. If you select the word "RABIES", you're informed that 3/6 letters matched the answer.
 
-After those four attempts, the computer regenerates the characters and words (Math.random) and has chosen a new passcode. So technically, it would be possible to play many rounds without selecting the correct word.
+After those four attempts, the computer regenerates the characters and words and has chosen a new passcode. So technically, it would be possible to play for many rounds without selecting the correct word.
 
-The mini-game occasionally shows a < or two. Selecting one will remove one of the wrong answers at random. If there happen to be 9 randomly generated < characters, you'll be able to remove 9 wrong words at random. This is not in the player instructions, so it would be up to them to stumble across it.
+In summation:
+
+1. Win state: Select the correct word that the game chose to be the "goal word."
+2. Lose state: Run out of attempts (4) to select the "goal word." 
 
 In Fallout 3, unlocking the correct password means getting access to the computer that you're trying to hack. In my version of the mini-game, however, the only thing you can really win is the feeling of success.
 
@@ -51,6 +54,7 @@ Here's a screenshot from Fallout 3. The red boxes and text were not created by m
  - Color scheme (amber)
  - User typing their first name on landing page
  - User's name reappearing on win page
+ - Highlight a word/character on hover
 
 3. Not important but urgent:
 - Game logic:
@@ -59,19 +63,18 @@ Here's a screenshot from Fallout 3. The red boxes and text were not created by m
 4. Not important and not urgent:
 - General CSS
   - Screen display
-  - 
-
+  - The computer monitor
+  
 ## MVP
 
 User will be able to:
   - Interact with the power button (start and reset game)
   - Input their name (landing page)
   - Click and select words from choices
-  - 
 
 ## POST MVP
 
-- Seeing characters between <> would either A. Replenish lives/attempts or B. Randomly remove bad words
+- Seeing characters between <> would either A. Replenish lives/attempts or B. Remove a bad word at random. This is not in the player instructions, so it would be up to them to stumble across it.
 - Key clacks and beeping (i.e. error) sound effects
 - Dictionary API
 - Easy/Medium/Hard difficulty levels (hard = longer words)
@@ -84,7 +87,7 @@ Include images of your wireframes.
 
 ### Landing Page
 
-
+![test](https://git.generalassemb.ly/storage/user/9432/files/57f9e028-1c63-11e8-8e86-7cf2f54ea161)
 
 
 ### Game Initialization
