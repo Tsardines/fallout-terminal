@@ -36,7 +36,7 @@ In Fallout 3, unlocking the correct password means getting access to the compute
 Here's a screenshot from Fallout 3.
 <img src="https://i.ytimg.com/vi/1iM12XyQPJE/maxresdefault.jpg" alt="alt text">
 
-And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working recreation of the game. At some point in the future, I'd like my game to resemble this one.
+And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working recreation of the game. At some point in the future, I'd like my game to resemble and behave like this one.
 
 ## Priority Matrix
 
@@ -65,12 +65,17 @@ And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working r
 - General CSS
   - Screen display
   - The computer monitor
+  - Power dial appearance
   
 ## MVP
 
 User will be able to:
   - Interact with the power button (start and reset game)
   - Input their name (landing page)
+- Second button on TV that pop ups information:
+  - Created by:
+  - GitHub link
+  - Bethesda Softworks license
 
 ## POST MVP
 
@@ -96,7 +101,6 @@ I've inserted the wireframes below.
 5. User types their first name and clicks on the "GO" button adjacent to it
 6. Taken to Landing 3.
 
-
 ### Game Initialization
 
 <img src="https://i.imgur.com/oIxpalm.jpg" alt="alt text" width="200" height="400">
@@ -117,13 +121,11 @@ I've inserted the wireframes below.
  13. When you get down to one life, the text changes a bit: "1 attempt left! Lock down pending."
  14. Depending on whether the user selects correctly or incorrectly, they will either see a "Win Screen" or a "Lose Screen." For more information, please scroll down and go to ### Winning the Game.
 
-
-
 ### Playing The Game
 
-98% of the input will involve the user clicking their mouse. The other 2% is using their keyboard to type their first name on Landing 1.
+For a more detailed list, please see ## Game Components.
 
-What will be the flow of the game, what will the user be expected to do and what will the user expect from the game
+98% of the input will involve the user clicking their mouse. The other 2% is using their keyboard to type their first name on Landing 1.
 
 ### Winning The Game
 1. Win state: Select the correct word that the game chose to be the "goal word."
@@ -136,16 +138,16 @@ The user will be able to restart the game by clicking on the power dial at the b
 
 ## Functional Components
 
-Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method.
+/// Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method.
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
+/// Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
 
 ## Dividing the Game
 
 I divided the logic of the game into five areas:
 
 1. Attempts left
-- case/switch for different options (5 options: 4 for the attempts and 1 for game over)
+- Case/switch for different options (5 options: 4 for the attempts and 1 for game over)
 
 2. rowStarts
 - var rowStarts = ["0xN0H4", "0xN0H6", "0xN0H1"]...etc
@@ -175,31 +177,36 @@ I divided the logic of the game into five areas:
 
 
 
-Priority Matrix: 1. Important & urgent    2. Important but not urgent    3. Not important but urgent    4. Not important and not urgent
+Priority Matrix: 1. Important & urgent  |  2. Important but not urgent  |  3. Not important but urgent  |  4. Not important and not urgent
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Component 1 | H | 10hrs| 12hrs | 12hrs |
+| Object.is() | 1 | 2H | :---: | :---: |
+
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
 | Function | Description | Game Stage
 | --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string | x 
-| Object.is() | Determines whether two values are the same value | 5 
+| Capitalize | This will capitalize the first letter in a string | x |
+| Math.floor | Returns the largest integer less than or equal to a given number | 2, 3, 4 |
+| Math.random | Return a random number between 0 (inclusive) and 1 (exclusive) | 2, 3, 4 |
+
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project.
+/// Use this section to list all supporting libraries and thier role in the project.
+- Still deciding on using jQuery or vanilla
+  - Leaning toward jQuery, but not sure
 
 ## jQuery Discoveries
- Use this section to list some, but not all, of the jQuery methods and\or functionality discovered while working on this project.
+/// Use this section to list some, but not all, of the jQuery methods and\or functionality discovered while working on this project.
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+/// Use this section to document what changes were made and the reasoning behind those changes.  
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+/// Use this section to list of all major issues encountered and their resolution.
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
