@@ -38,6 +38,8 @@ In Fallout 3, unlocking the correct password means getting access to the compute
 Here's a screenshot from Fallout 3. The red boxes and text were not created by me, but they help illustrate the point about getting a certain amount of letters right.
 ![image](https://git.generalassemb.ly/storage/user/9432/files/57f9e028-1c63-11e8-8e86-7cf2f54ea161)
 
+And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working recreation of the game. At some point in the future, I'd like my game to resemble this one.
+
 ## Priority Matrix
 
 1. Important & urgent:
@@ -87,7 +89,7 @@ Include images of your wireframes.
 
 ### Landing Page
 
-![test](https://git.generalassemb.ly/storage/user/9432/files/57f9e028-1c63-11e8-8e86-7cf2f54ea161)
+![Landing Page](wframe 01.jpg)
 
 
 ### Game Initialization
@@ -95,20 +97,29 @@ Include images of your wireframes.
 
 
 
+
 ### Playing The Game
-What will be the flow of the game, what will the user be expected to do and what will the user expect from the gam
+
+1. The user will 
+
+What will be the flow of the game, what will the user be expected to do and what will the user expect from the game
 
 ### Winning The Game
-What does it look like when the game ends, what determines winning or losing?
+1. Win state: Select the correct word that the game chose to be the "goal word."
+  - Computer clears and shows the text: "Welcome, [your name]."
+2. Lose state: Run out of attempts (4) to select the "goal word." 
+  - Computer clears and shows the text: "Terminal locked. Please contact your administrator."
 
 ### Game Reset
-The user will be able to restart the game by clicking on the power dial at the bottom of the screen.
+The user will be able to restart the game by clicking on the power dial at the bottom of the screen. Clicking it once turns the computer off and clicking it again will turn it back on.
 
 ## Functional Components
 
 Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method.
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
+
+Priority Matrix: 1. Important & urgent 2. Important but not urgent 3. Not important but urgent 4. Not important and not urgent
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
