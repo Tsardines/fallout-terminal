@@ -20,11 +20,11 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 I'm interested in recreating the hacking mini-game from the popular video game title, Fallout 3.
 
-You're presented with four columns containing fifteen to seventeen rows each. Each row is populated by randomly generated characters and one randomly generated word, and there is one word per line. The words don't have a specific theme, but they all have the same amount of letters. For my version, each word will have six.
+You're presented with four columns containing fifteen to seventeen rows each. Each row is populated by randomly generated characters and randomly generated words are displayed in various places (not limited to one per line), and there is one word per line. The words don't have a specific theme, but they all have the same amount of letters. For my version, each word will have six.
 
-The computer will randomly pick one of those words to be its passcode, and you're given four attempts to click and select it. Upon making an incorrect choice you're told that: your answer was incorrect, and how many letters in your choice matched those in the right passcode. The start of the game shows the line "Four attempts remaining" with four blinking boxes next to it. By the time you're down to one more life, the line reads "One attempt remaining! Lock down pending" with one blinking box.
+The computer will randomly pick one of those words to be its passcode, and you're given four attempts to click and select it. Upon making an incorrect choice you're told that: your answer was incorrect, and how many letters in your choice matched those in the right passcode (x/y, with x being how many letters matched the goal word and y being the word length). The start of the game shows the line "Four attempts remaining" with four blinking boxes next to it. By the time you're down to one more life, the line reads "One attempt remaining! Lock down pending" with one blinking box.
 
-After those four attempts, the computer regenerates the characters and words and has chosen a new passcode. So technically, it would be possible to play for many rounds without selecting the correct word.
+After those four attempts, the computer regenerates the characters and words and has chosen a new passcode. So technically, it would be possible to play for many rounds without winning.
 
 In summation:
 
@@ -66,14 +66,15 @@ And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working r
   - Screen display
   - The computer monitor
   - Power dial appearance
+  - Screen illuminates bottom of computer area
   
 ## MVP
 
-User will be able to:
+- User will be able to:
   - Interact with the power button (start and reset game)
   - Input their name (landing page)
 - Second button on TV that pop ups information:
-  - Created by:
+  - Created by: Me
   - GitHub link
   - Bethesda Softworks license
 
@@ -142,7 +143,7 @@ The user will be able to restart the game by clicking on the power dial at the b
 
 /// Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
 
-## Dividing the Game
+## Game Logic Areas
 
 I divided the logic of the game into five areas:
 
@@ -158,13 +159,15 @@ I divided the logic of the game into five areas:
 - var garbage = ["!", "%", "<", ")", ]...etc
 - Math.floor(Math.random()
 - Empty array?
-  - push from var garbage into newArr
+  - push from var garbage into newArr (mixed with random words)
 
 4. Random words
 - var words = ["NIMBUS", "CLEARS", "CHURCH", "WRITES", ]...etc
 - Math.floor(Math.random()
 - Empty array?
-  - push from var words into newArr
+  - push from var words into newArr (mixed with garbage words)
+- onClick
+  - user will be able to click on all words
 
 5. User guesses and correct letters
 - Need to check:
@@ -172,24 +175,22 @@ I divided the logic of the game into five areas:
   2. They have the same # of items
 - Object.is(value1, value2)
   - Determines equality of two values
-- string.split(), then compare
-- forEach (loop over each letter)
+- string.split(), then compare OR forEach (loop over each letter)
 
 
 
 Priority Matrix: 1. Important & urgent  |  2. Important but not urgent  |  3. Not important but urgent  |  4. Not important and not urgent
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
+| :---: | :---: |  :---: | :---: | :---: |
 | Object.is() | 1 | 2H | :---: | :---: |
 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
-| Function | Description | Game Stage
-| --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string | x |
+| Function | Description | Game Logic Area |
+|  :---: | :---: | :---: |  
 | Math.floor | Returns the largest integer less than or equal to a given number | 2, 3, 4 |
 | Math.random | Return a random number between 0 (inclusive) and 1 (exclusive) | 2, 3, 4 |
 
