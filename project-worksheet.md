@@ -46,9 +46,10 @@ And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working r
 - Game logic:
   - Taking random words from words array
   - Taking random characters from chars array
-  - Have program compare your selected with word to goal word
+  - Selecting a word
+  - Have program compare your selected with word to its goal word
   - You select "CLEAR". The goal word is "ROACH." 
-  - "Entry denied. 3/5 correct."
+  -   "Entry denied. 3/5 correct."
   - onClick event for selecting words
 
 2. Important but not urgent:
@@ -72,7 +73,6 @@ And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working r
 User will be able to:
   - Interact with the power button (start and reset game)
   - Input their name (landing page)
-  - Click and select words from choices
 
 ## POST MVP
 
@@ -103,15 +103,27 @@ I've inserted the wireframes below.
 
 <img src="https://i.imgur.com/oIxpalm.jpg" alt="alt text" width="200" height="400">
 
-
+7. User is presented with rows containing randomly generated characters. Most importantly, there is also one word per row. The words are accessed from a words array (and the characters from a chars array)
+8. Close to the top of the screen there's the text "4 attempts left" with four boxes next to it ( [] [] [] [] )
+9. The game has chosen one of these words to be the "goal word." Clicking on this word wins the game.
+10. The user picks a word.
 
 <img src="https://i.imgur.com/O2nTwkp.jpg" alt="alt text" width="400" height="200">
+
+11. If the word is incorrect, the follow message appears on the right side:
+  "Entry denied."
+  "x/5 correct." 
+    - With x being the amount of letters from your word that match the computer's goal word. 
+    - If the computer's goal word is NIMBUS and you select the word SINGED, you'll be presented with "1/5 correct."
+ 12. When you have three lives left, the text at the top will say "3 attempts left" and three boxes will be present.
+ 13. When you get down to one life, the text changes a bit: "1 attempt left! Lock down pending."
+ 14. Depending on whether the user selects correctly or incorrectly, they will either see a "Win Screen" or a "Lose Screen." For more information, please scroll down and go to ### Winning the Game.
 
 
 
 ### Playing The Game
 
-1. The user will 
+98% of the input will involve the user clicking their mouse. The other 2% is using their keyboard to type their first name on Landing 1.
 
 What will be the flow of the game, what will the user be expected to do and what will the user expect from the game
 
