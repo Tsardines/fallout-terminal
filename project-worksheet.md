@@ -171,8 +171,8 @@ Helper functions should be generic enought that they can be reused in other appl
 
 | Function | Description | Game Stage
 | --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string | x |
-| Object.is() | Determines whether two values are the same value | 5 |
+| Capitalize | This will capitalize the first letter in a string | x 
+| Object.is() | Determines whether two values are the same value | 5 
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project.
