@@ -24,8 +24,6 @@ You're presented with four columns containing fifteen to seventeen rows each. Ea
 
 The computer will randomly pick one of those words to be its passcode, and you're given four attempts to click and select it. Upon making an incorrect choice you're told that: your answer was incorrect, and how many letters in your choice matched those in the right passcode. The start of the game shows the line "Four attempts remaining" with four blinking boxes next to it. By the time you're down to one more life, the line reads "One attempt remaining! Lock down pending" with one blinking box.
 
-As an example, when the game begins the board is populated by rows, and each row contains one word. The game looks at those words and randomly selects the word "NIMBUS" as its passcode. If you select the word "RABIES", you're informed that 3/6 letters matched the answer.
-
 After those four attempts, the computer regenerates the characters and words and has chosen a new passcode. So technically, it would be possible to play for many rounds without selecting the correct word.
 
 In summation:
@@ -142,7 +140,27 @@ Based on the initial logic defined in the previous game phases section try and b
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
 
-Priority Matrix: 1. Important & urgent 2. Important but not urgent 3. Not important but urgent 4. Not important and not urgent
+# Dividing the Game
+
+I divided the logic of the game into five areas:
+
+1. Attempts left
+- case/switch for different options (5 options: 4 for the attempts and 1 for game over)
+
+2. rowStarts
+
+3. Random chars
+
+4. Random words
+
+5. User guesses and correct letters
+
+
+
+
+
+
+Priority Matrix: 1. Important & urgent    2. Important but not urgent    3. Not important but urgent    4. Not important and not urgent
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
@@ -151,9 +169,10 @@ Priority Matrix: 1. Important & urgent 2. Important but not urgent 3. Not import
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
-| Function | Description |
+| Function | Description | Game Stage
 | --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string |
+| Capitalize | This will capitalize the first letter in a string | x |
+| Object.is() | Determines whether two values are the same value | 5 |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project.
