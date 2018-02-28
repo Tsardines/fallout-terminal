@@ -89,7 +89,7 @@ Include images of your wireframes.
 
 ### Landing Page
 
-![Landing Page](wframe 01.jpg)
+![Landing Page](https://i.imgur.com/tWjUXoD.jpg =250x250)
 
 
 ### Game Initialization
