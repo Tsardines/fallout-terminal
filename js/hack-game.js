@@ -7,7 +7,7 @@ var rowStart = ["0xN0H1", "0xN0H2", "0xN0H3", "0xN0H4", "0xN0H5", "0xN0H6", "0xN
 
 var newArray = [];
 
-///// ======== ////// ATTEMPTS ///// ======== //////
+///// ======== ////// ATTEMPTS ///// ======== //////  
 
 
 
