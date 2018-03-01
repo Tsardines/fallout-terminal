@@ -1,7 +1,17 @@
-body {}
+body {
+  font-family: 'Share Tech Mono', monospace;
+  list-style-type: none;
+}
 
-#monitor {}
+#monitor {
+}
 
-#screen {}
+#screen {
+}
 
-#knob {}
+#knob {
+}
+
+.ul {
+
+}
