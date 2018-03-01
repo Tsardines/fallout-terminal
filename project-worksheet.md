@@ -29,7 +29,11 @@ After those four attempts, aka game over, the computer **regenerates the charact
 In summation:
 
 1. **Win state:** Select the correct word that the game chose to be the "goal word."
+<<<<<<< HEAD
 2. **Lose state:** Run out of attempts (4) to select the "goal word."
+=======
+2. **Lose state:** Run out of attempts (4) to select the "goal word."
+>>>>>>> b5d76c40b34573b143865bcfad41670f2a5b4dad
 
 In Fallout 3, unlocking the correct password means getting access to the computer that you're trying to hack. In my version of the mini-game, however, the only thing you can really win is the feeling of success.
 
@@ -114,8 +118,13 @@ I've inserted the wireframes below.
 The **image below** is a more **accurate representation of the game screen** compared to the image above. Something to note---and this will be fixed---is that in the picture every line contains a word. This will **not happen** during the final game. I'd originally considered one per line but realized it complicates things.
 <img src="https://i.imgur.com/O2nTwkp.jpg" alt="alt text" width="400" height="200">
 
+<<<<<<< HEAD
 11. If the word is incorrect, the follow message appears on the right side: "Entry denied. x/6 correct."
     - With x being the amount of letters from your word that match the computer's goal word.
+=======
+11. If the word is incorrect, the follow message appears on the right side: "Entry denied. x/6 correct."
+    - With x being the amount of letters from your word that match the computer's goal word.
+>>>>>>> b5d76c40b34573b143865bcfad41670f2a5b4dad
     - If the computer's goal word is NIMBUS and you select the word SINGED, you'll be presented with "1/6 correct."
  12. When you have three lives left, the text at the top will say "3 attempts left" and three boxes will be present.
  13. When you get **down to one life,** the text changes a bit: **"1 attempt left! Lock down pending."**
@@ -130,7 +139,11 @@ For a more detailed list, please see ## Game Components.
 ### Winning The Game
 1. **Win state:** Select the correct word that the game chose to be the "goal word."
   - Computer clears and shows the text: **"Welcome, [your name]."**
+<<<<<<< HEAD
 2. **Lose state:** Run out of attempts (4) to select the "goal word."
+=======
+2. **Lose state:** Run out of attempts (4) to select the "goal word."
+>>>>>>> b5d76c40b34573b143865bcfad41670f2a5b4dad
   - Computer clears and shows the text: **"Terminal locked. Please contact your administrator."**
 
 ### Game Reset
@@ -138,9 +151,9 @@ The user will be able to **restart the game** by **clicking on the power dial at
 
 ## Functional Components
 
-/// Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method.
+/// Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusability.  Once a function has been defined it can then be incorporated into a class as a method.
 
-/// Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted.
+/// Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evaluate game possibilities based on time needed and the actual time you have before game must be submitted.
 
 ## Game Logic Areas
 
