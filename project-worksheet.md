@@ -149,8 +149,9 @@ The user will be able to **restart the game** by **clicking on the power dial at
 **1. Attempts left**
 - **Case/switch** for different options (5 options: 4 for the attempts and 1 for game over)
 
-**2. rowStarts**
-- var rowStarts = ["0xN0H4", "0xN0H6", "0xN0H1"]...etc
+**2. zeroOneCode and rowStarts**
+- var zeroOneCode = ["0xN0H4", "0xN0H6", "0xN0H1"]...etc
+  - Will be **pushed** into blank array rowStarts
 - **Math.floor(Math.random()**
 
 **3. Random chars**
