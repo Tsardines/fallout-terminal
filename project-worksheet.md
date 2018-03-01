@@ -20,7 +20,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 I'm interested in recreating the hacking mini-game from the popular video game Fallout 3.
 
-You're presented with four columns containing fifteen to seventeen rows each. **Each row is populated by randomly generated characters** and **randomly generated words** are displayed in various places (not limited to one per line). The words don't have a specific theme, but **they all have the same amount of letters**. For my version, each word will have six.
+You're presented with four columns containing fifteen to seventeen rows each. **Each row is populated by randomly generated characters** and **randomly generated words,** and the latter are are displayed in various places (not limited to one per line). The words don't have a specific theme, but **they all have the same amount of letters**. For my version, each word will have six.
 
 The computer will **randomly pick one of those words to be its passcode,** and you're given **four attempts to guess which one it is.** Upon making an incorrect choice you're told that: your answer was incorrect, and **how many letters in your choice matched those in the right passcode** (x/y, with x being how many letters matched the goal word and y being the word length). The **start of the game** shows the line **"Four attempts remaining"** with four blinking boxes next to it. By the time you're down to one more life, the line reads "One attempt remaining! Lock down pending" with one blinking box.
 
@@ -151,16 +151,16 @@ The user will be able to **restart the game** by **clicking on the power dial at
 
 **2. rowStarts**
 - var rowStarts = ["0xN0H4", "0xN0H6", "0xN0H1"]...etc
-  - **Math.floor(Math.random()**
+- **Math.floor(Math.random()**
 
 **3. Random chars**
 - var garbage = ["!", "%", "<", ")", ]...etc
-  - **Math.floor(Math.random()**
-  - **Push** from var garbage into newArr (mixed with random words)
+- **Math.floor(Math.random()**
+- **Push** from var garbage into newArr (mixed with random words)
 
 **4. Random words**
 - var words = ["NIMBUS", "CLEARS", "CHURCH", "WRITES", ]...etc
-  - **Math.floor(Math.random()**
+- **Math.floor(Math.random()**
 - **Push** from var words into newArr (mixed with garbage words)
 - **onClick**
   - user will be able to click on all words
@@ -193,7 +193,7 @@ Helper functions should be generic enought that they can be reused in other appl
 
 ## Additional Libraries
 /// Use this section to list all supporting libraries and thier role in the project.
-**- Still deciding on using jQuery or vanilla**
+- **Still deciding on using jQuery or vanilla**
   - Leaning toward jQuery, but not sure
 
 ## jQuery Discoveries
