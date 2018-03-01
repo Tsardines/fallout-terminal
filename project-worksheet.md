@@ -71,8 +71,8 @@ And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working r
 ## MVP
 
 - User will be able to:
-  **- Interact with the power button (start and reset game)**
-  **- Input their name (landing page)**
+  - **Interact with the power button (start and reset game)**
+  - **Input their name (landing page)**
 - Second button on TV that pop ups information:
   - Created by: Me
   - GitHub link
@@ -98,7 +98,7 @@ I've inserted the wireframes below.
 1. Shows a blank computer screen.
 2. User clicks on the "power dial" 
 3. Landing 2 appears.
-4. Prompt: "Please enter your first name" with an input box below.
+4. Prompt: **"Please enter your first name"** with an input box below.
 5. User types their first name and clicks on the "GO" button adjacent to it
 6. Taken to Landing 3.
 
@@ -106,15 +106,15 @@ I've inserted the wireframes below.
 
 <img src="https://i.imgur.com/oIxpalm.jpg" alt="alt text" width="200" height="400">
 
-7. User is presented with rows containing randomly generated characters. The words are accessed from a words array and are randomly spread out amongst the characters. More specifically, none of the words are separated---you won't see anything like this: SP*~!IRAL.
+7. User is presented with rows containing randomly generated characters and randomly generated words. The words are accessed from a words array and are randomly spread out amongst the characters. More specifically, none of the words are separated---you won't see anything like this: SP*~!IRAL.
 8. Close to the top of the screen there's the text "4 attempts left" with four boxes next to it ( [] [] [] [] )
 9. The game has chosen one of these words to be the "goal word." **Clicking on this word wins the game.**
 10. The user picks a word that they think might be the passcode.
 
+The **image below** is a more **accurate representation of the game screen** compared to the image above. Something to note---and this will be fixed---is that in the picture every line contains a word. This will **not happen** during the final game. I'd originally considered one per line but realized it complicates things.
 <img src="https://i.imgur.com/O2nTwkp.jpg" alt="alt text" width="400" height="200">
 
-11. If the word is incorrect, the follow message appears on the right side:
-  "Entry denied. x/6 correct." 
+11. If the word is incorrect, the follow message appears on the right side: "Entry denied. x/6 correct." 
     - With x being the amount of letters from your word that match the computer's goal word. 
     - If the computer's goal word is NIMBUS and you select the word SINGED, you'll be presented with "1/6 correct."
  12. When you have three lives left, the text at the top will say "3 attempts left" and three boxes will be present.
@@ -151,16 +151,16 @@ The user will be able to **restart the game** by **clicking on the power dial at
 
 **2. rowStarts**
 - var rowStarts = ["0xN0H4", "0xN0H6", "0xN0H1"]...etc
-**- Math.floor(Math.random()**
+  - **Math.floor(Math.random()**
 
 **3. Random chars**
 - var garbage = ["!", "%", "<", ")", ]...etc
-**- Math.floor(Math.random()**
+  - **Math.floor(Math.random()**
   - **Push** from var garbage into newArr (mixed with random words)
 
 **4. Random words**
 - var words = ["NIMBUS", "CLEARS", "CHURCH", "WRITES", ]...etc
-**- Math.floor(Math.random()**
+  - **Math.floor(Math.random()**
 - **Push** from var words into newArr (mixed with garbage words)
 - **onClick**
   - user will be able to click on all words
@@ -169,7 +169,7 @@ The user will be able to **restart the game** by **clicking on the power dial at
 - Need to check:
   1. That they're the **same object type**
   2. They have the **same # of items**
-**- Object.is(value1, value2)**
+- **Object.is(value1, value2)**
   - Determines equality of two values
 - **string.split()** then compare, OR **forEach** (loop over each letter)
 
@@ -177,7 +177,7 @@ The user will be able to **restart the game** by **clicking on the power dial at
 
 Priority Matrix: 1. Important & urgent  |  2. Important but not urgent  |  3. Not important but urgent  |  4. Not important and not urgent
 
-**| Component | Priority | Estimated Time | Time Invested | Actual Time |**
+| **Component | Priority | Estimated Time | Time Invested | Actual Time** |
 | :---: | :---: |  :---: | :---: | :---: |
 | **Object.is()** | 1 | 2H | :---: | :---: |
 
@@ -185,7 +185,7 @@ Priority Matrix: 1. Important & urgent  |  2. Important but not urgent  |  3. No
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
-**| Function | Description | Game Logic Area |**
+| **Function | Description | Game Logic Area** |
 |  :---: | :---: | :---: |  
 | Math.floor | Returns the largest integer less than or equal to a given number | 2, 3, 4 |
 | Math.random | Return a random number between 0 (inclusive) and 1 (exclusive) | 2, 3, 4 |
