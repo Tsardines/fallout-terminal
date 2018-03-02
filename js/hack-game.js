@@ -9,21 +9,21 @@ var words = ["REAPER", "TRYING", "VERMIN", "MISERY", "CRISPY", "TRUANT", "ARGUES
   "PLANET", "PLENTY", "PLAYER", "BEAUTY", "BISHOP", "BOTTLE", "BREATH", "BRANCH", "CAMERA", "BUTTON", "BELONG", "BETTER"
 ];
 
-var zeroOneCode = ["0xN0H1", "0xN0H2", "0xN0H3", "0xN0H4", "0xN0H5", "0xN0H6", "0xN0H7", "0xN0H8", "0xN0H9", "0xN0H0", "1xN0H1", "1xN0H2", "1xN0H3", "1xN0H4", "1xN0H5", "1xN0H6", "1xN0H7", "1xN0H8", "1xN0H9",
-  "1xN0H0"
-];
+// var zeroOneCode = ["0xN0H1", "0xN0H2", "0xN0H3", "0xN0H4", "0xN0H5", "0xN0H6", "0xN0H7", "0xN0H8", "0xN0H9", "0xN0H0", "1xN0H1", "1xN0H2", "1xN0H3", "1xN0H4", "1xN0H5", "1xN0H6", "1xN0H7", "1xN0H8", "1xN0H9",
+//   "1xN0H0"
+// ];
 
-var rowStarts = []; // where zeroOneCode will get pushed to (Landing 3)
+// var rowStarts = []; // where zeroOneCode will get pushed to (Landing 3)
 
 var giantArray = []; // combination of var garbage and var words
 
-var goalWord = []; // word that the computer chose to be the "goal"
+var goalWord = ""; // word that the computer chose to be the "goal"  // STRING
 
-var userWord = []; // the current word that the user selected
+var userWord = ""; // the current word that the user selected // STRING
 
 var discardedWords = []; // incorrect words that the player previously chose
 
-var playerAttempts = []; // how many past attempts the user has made---to be populated with incorrect words
+var playerAttempts = []; // how many past attempts the user has made
 
 ///// ======== ////// LANDING PAGES 1 AND 2 ///// ======== //////
 
@@ -36,9 +36,8 @@ var playerAttempts = []; // how many past attempts the user has made---to be pop
 
 ///// ======== ////// ATTEMPTS ///// ======== //////
 
-// case/switch || if/else
 // this shows how many attempts the player has left
-// this is updated after incorrect user words get pushed into the discardedWords array
+// this is updated after incorrect userWords get pushed into the discardedWords array
 
 for (var i = 0; i < 1; i++) {
   if (playerAttempts.length === 4) {
@@ -72,25 +71,43 @@ for (var i = 0; i < 1; i++) {
 // spread out objects amongst garbage chars in giantArray
 // have user be able to highlight words
 
+// create a single DOM node
+// fill it with the text with the first word from the words array
+//
+let createAndDisplayWordElements = function() {
+  var shuffledWords = shuffle(words);
+
+  for (var i = 0; i <= 10; i++) {
+    var singleWord = document.createElement('p') // creating 'p' element, calling it singleWord
+    singleWord.innerHTML = "!" + "<" + "#" + shuffledWords[i]; // setting the content of the first word
+    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
+    giantArrayElement.appendChild(singleWord); // appending singleWord to giantArrayElement
+  }
+}
+
+createAndDisplayWordElements();
+
+// var shuffle = require('shuffle-array'),
+// numTest = [1, 2, 3, 4, 5, 6];
+//
+// shuffle(numTest);
+//
+// console.log(numTest);
 
 
-var wordsInThisRound = function(w) {
-  var words = wordsInThisRound[Math.floor(Math.random() * 10)];
-  giantArray.push(words);
-};
-
-wordsInThisRound();
 
 
 
+// var wordsInThisRound = function() {
+//   let sixLetterWords = wordsInThisRound[Math.floor(Math.random() * 10)];
+//   var giantArray = words.push(sixLetterWords[i]);
+// };
+//
+// console.log(wordsInThisRound());
 
 
 
-// var words = ["NIMBUS", "CLEARS", "CHURCH", "WRITES", ]...etc
-
-// Math.floor(Math.random()
-
-// Push from var words into giantArray (mixed with garbage words)
+// Push from var words into giantArray
 
 
 
@@ -100,12 +117,15 @@ wordsInThisRound();
 ///// ======== ////// GARBAGE CHARACTERS ///// ======== //////
 
 
-let moveGarbage = function(g) {
-  var garbage = moveGarbage[Math.floor(Math.random() * 60)];
-  giantArray.push(garbage);
-};
 
-moveGarbage();
+//
+// var moveGarbage = function() {
+//   let garbage = moveGarbage[Math.floor(Math.random() * 80)];
+//   let giantArray = garbage.push(garbage[i]);
+//
+// };
+//
+// console.log(moveGarbage());
 
 // access objects in garbage array
 // use Math.random to chose garbage objects
@@ -118,17 +138,17 @@ moveGarbage();
 
 
 
+
 ///// ======== ////// GIANT ARRAY ///// ======== //////
 
-// let words;
-// let garbage;
-let garbageAndWords = function() {
-  let giantArray = garbageAndWords[Math.floor(Math.random() * 10)]; // use Math.random to get goal word
-  giantArray.push(words); // words that get pushed into goalWord array
-  // return goalWord;
-};
 
-console.log(giantArray, "this will be the giant array");
+// var garbageAndWords = function() {
+//   let giantArray = garbageAndWords[Math.floor(Math.random() * 60)]; // use Math.random to choose words for that round
+//   giantArray.push(words); // words that get pushed into giantArray
+//   // return goalWord;
+// };
+
+// console.log(garbageAndWords(giantArray, "this will be the giant array"));
 
 // a combination of garbage array and words array
 // user will be able to click on all words
@@ -138,14 +158,14 @@ console.log(giantArray, "this will be the giant array");
 
 ///// ======== ////// GOAL WORD ///// ======== //////
 
-var giantArray;
-var computerChoice = function() {
-  var goalWord = computerChoice[Math.floor(Math.random() * 1)]; // use Math.random to get goal word
-  goalWord.push(giantArray); // new goal word gets pushed into goalWord array
-  // return goalWord;
-};
-
-console.log(goalWord, "this is where the goal word will be"); // shows up as [] in dev tools. This appears to be a good sign.
+// var giantArray;
+// var computerChoice = function() {
+//   var goalWord = computerChoice[Math.floor(Math.random() * 1)]; // use Math.random to get goal word
+//   goalWord.push(giantArray); // new goal word gets pushed into goalWord array
+//   // return goalWord;
+// };
+//
+// console.log(goalWord, "this is where the goal word will be"); // shows up as [] in dev tools. This appears to be a good sign.
 
 
 ///// ======== ////// PLAYER SELECTS WORD ///// ======== //////
@@ -167,12 +187,32 @@ console.log(goalWord, "this is where the goal word will be"); // shows up as [] 
 // this word will be compared to the object in the computer's goalWord array
 
 
+// Note: The code below came from stack overflow.
+// var userWord = a;
+// var goalWord = b;
+// function equality(a, b) {
+//   if (a === b) return true;
+//   if (a == null || b == null) return false;
+//   if (a.length != b.length) return false;
+//
+//   for (var i = 0; i < a.length; i++) {
+//     if (a[i] !== b[i] return false)
+//   }
+//   return true;
+// }
+//
+// console.log(a, b);
+
+
+
+
+
 // let compare = 0;
 // function goalAndUserWord(x, y) {
 //   for (var i = 0; i = compare.length; i++) { // not sure about ++
 //     if (goalWord === userWord) {
 //       /// win state screen
-//       return winState;
+// //      return winState;
 //     } else {
 //       playerAttempts.push(goalWord);
 //
@@ -187,3 +227,6 @@ console.log(goalWord, "this is where the goal word will be"); // shows up as [] 
   // assume the player selects an incorrect word
     // the computer will look at the userWord
     // if userWord !== goalWord
+
+
+///// ======== ////// COMPUTER SCREEN ///// ======== //////
