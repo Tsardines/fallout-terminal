@@ -206,7 +206,7 @@ Helper functions should be generic enought that they can be reused in other appl
 
 
 ## Additional Libraries
-/// Use this section to list all supporting libraries and thier role in the project.
+/// Use this section to list all supporting libraries and their role in the project.
 - **Still deciding on using jQuery or vanilla**
   - Leaning toward jQuery, but not sure
 

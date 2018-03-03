@@ -25,5 +25,8 @@
   "repository": {
     "type": "git",
     "url": "git@git.generalassemb.ly:wdi-nyc/project-1.git"
+  },
+  "dependencies": {
+    "shuffle-array": "^1.0.1"
   }
 }

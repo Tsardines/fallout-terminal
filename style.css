@@ -1,17 +1,77 @@
+html {
+  background:no-repeat center center fixed;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+}
+
+@media (min-width: 1120px), (min-height: 630px) {
+    body { background-size: auto; }
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
 body {
   font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+  background-color: gray;
+  color: #fcf8eb;
   list-style-type: none;
 }
 
 #monitor {
+/*   background-color: pink;
+ */
 }
 
 #screen {
+  background-color: #473611;
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+/*   position: relative;
+ */}
+
+.top-text {
+ list-style-type: none;
 }
 
 #knob {
 }
 
-.ul {
+.panels {
+}
 
+.form {
+
+}
+
+.column1 {
+  float: left;
+  margin-top: 30px;
+  height: 350px;
+  margin-left: 20px;
+  z-index: 5;
+  list-style-type: none;
+}
+
+.giant-array {
+  float: inherit;
+  margin: 30px 0px 120px 0;
+  padding-left: 50px;
+  z-index: 10;
+  display: inline-block;
+  width: 50%;
+  height: 350px;
+  cursor: pointer;
+}
+
+.column2 {
+  float: right;
+  margin-top: 30px;
+  height: 350px;
+  margin-right: 160px;
+  z-index: 5;
+  list-style-type: none;
 }
