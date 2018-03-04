@@ -17,7 +17,7 @@ body {
   font-size: 20px;
   background-color: gray;
   color: #fcf8eb;
-  list-style-type: none;
+/*   list-style-type: none; */
 }
 
 #monitor {
@@ -35,6 +35,11 @@ body {
 
 .top-text {
  list-style-type: none;
+ padding-left: 20px;
+}
+
+#attempts {
+  padding-left: 60px;
 }
 
 #knob {
