@@ -21,7 +21,8 @@ var words = ["REAPER","TRYING","VERMIN","MISERY","CRISPY","TRUANT","ARGUES","THI
 "PEWTER","PHYLUM","PLANET","POBOYS","POINTY","PSEUDO","PIXIES","QUARTZ","QUIETS","QUENCH","QUOKKA","QUIVER","RADARS","RAIDER","RARITY","RAZZED","REGGAE","RESCUE","RHINOS","RIPOST",
 "SALUKI","SALOON","SENSEI","SCOOPS","SHRIMP","SENILE","SHALOM","SHERPA","SHOVEL","SILVER","SLACKS","SLUDGE","SMELLY","SPECKS","STALKS","STEAMY","TABLAS","TAMALE","TAPIRS","TATTOO",
 "TAWNEY","TEMPEH","TONICS","TORCHY","TURTLE","UNARMS","UMLAUT","UMBRAE","UNEASY","UNPAID","UNWISE","UPHELD","UPHILL","UPLAND","UPLINK","UTMOST","UPPERS","VALVES","VERBAL","VERITY",
-"VERNIX","VORTEX","WAGONS","WHEEZE","WHISKY","WIRING","XYLEMS","SYLOID","WYVERN","YODELS","ZEBRAS","ZAPPER","ZEROES","ZEPHYR","ZOMBIE","HERNIA","HITMAN","GAOLER","CONGEE","FOGBOW"
+"VERNIX","VORTEX","WAGONS","WHEEZE","WHISKY","WIRING","XYLEMS","SYLOID","WYVERN","YODELS","ZEBRAS","ZAPPER","ZEROES","ZEPHYR","ZOMBIE","HERNIA","HITMAN","GAOLER","CONGEE","FOGBOW",
+"HANGAR"
 ];
 
 
@@ -34,18 +35,23 @@ var userWord = ""; // the current word that the user selected // STRING
 var playerAttempts = 0; // how many past attempts the user has made
 
 
-///// ======== ////// COMPUTER SCREEN ///// ======== //////
+/// ======== ////// POWER KNOB ///// ======== //////
+
+// function powerKnobRefresh() {
+// var knob = document.querySelector('.power-knob');
+// var createKnob = document.createElement('p');
+//
+//   knob.addEventListener("click", clickFunc);
+//     // window.location.reload();
+//
+//     knob.appendChild(createKnob)
+//     monitor.appendChild(knob);
+//
+// }
+// powerKnobRefresh();
 
 
 
-
-///// ======== ////// LANDING PAGES 1 AND 2 ///// ======== //////
-var form = document.querySelector('.form')
-form.addEventListener('submit', function(evt) {
-  evt.preventDefault(); // will prevent the refresh from happening---form won't submit to another page
-  var nameInputDOMElem = document.querySelector('.name');
-  console.log(nameInputDOMElem.value);
-});
 
 
 
@@ -71,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 
+
 ///// ======== ////// RANDOM WORDS, GIANT ARRAY ///// ======== //////
 function createWordElems() {
   for (var i = 0; i <= 14; i++) {
@@ -86,6 +93,7 @@ function createWordElems() {
 createWordElems();
 
 
+
 ///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 2 ///// ======== //////
 let createGarbageElemsTwo = function() {
   var shuffledGarbage = shuffle(garbage);
@@ -99,9 +107,10 @@ let createGarbageElemsTwo = function() {
 createGarbageElemsTwo();
 
 
+
 ///// ======== ////// RANDOM WORDS, GIANT ARRAY 2 ///// ======== //////
 function createWordElemsTwo() {
-  for (var j = 12; j <= 26; j++) {
+  for (var j = 15; j <= 29; j++) {
     var singleWord = document.createElement('span') // creating element, calling it singleWord
     singleWord.innerHTML = " " + shuffledWords[j]; // setting the content of the first word
 
@@ -112,6 +121,7 @@ function createWordElemsTwo() {
   }
 }
 createWordElemsTwo();
+
 
 
 ///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 3 ///// ======== //////
@@ -128,6 +138,7 @@ let createGarbageElemsThree = function() {
 createGarbageElemsThree();
 
 
+
 ///// ======== ////// GOAL WORD ///// ======== //////
 var giantArray;
 var computerChoice = function() {
@@ -138,13 +149,12 @@ computerChoice();
 
 
 
-
 ///// ======== ////// USER WORD SELECTED and LETTERS CORRECT ///// ======== //////
 function userWordHover() {
     var entryWord = document.createElement('span') // creating 'span' element
     entryWord.innerHTML = "test"; // setting the content of the first word
 
-    entryWord.addEventListener("click", clickFunc); // set onClick event for word
+    entryWord.addEventListener("mouseover", userWordHover); // set onClick event for word
 
     var panels = document.querySelector('.panels')
     screen.appendChild(entryWord);
@@ -152,18 +162,13 @@ function userWordHover() {
 }
 userWordHover();
 
-// create div, set id to word-entry
-// have div reference goalWord
-// call compare func to append result to div
-
-
 
 
 ///// ======== ////// COMPARING GOALWORD TO USERWORD ///// ======== //////
 function clickFunc(evt) {
   if (evt.target.innerText.slice(1) === goalWord) { // need .slice method to eliminate space character
   alert('Welcome back' + '. ');
-  } else {
+} else {
   console.log('try again');
   createAttempt();
   }
@@ -188,7 +193,7 @@ function createAttempt() {
       attempts.innerHTML = "!! Warning: Lock out pending !! █<br>";
       break;
     default:
-      attempts.innerHTML = "This terminal has been locked. Please contact your administrator.";
+      attempts.innerHTML = "This terminal has been locked.<br>Please contact your administrator.";
       break;
   }
   playerAttempts++;

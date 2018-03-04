@@ -57,7 +57,7 @@ html {
   background-size:cover;
 }
 
-@media (min-width: 1440px), (min-height: 900px) {
+@media (min-width: 900px), (min-height: 700px) {
     body { background-size: auto; }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -69,7 +69,6 @@ body {
   background-color: black;
   color: #fcf8eb;
   list-style-type: none;
-/*   list-style-type: none; */
 }
 
 #monitor {
@@ -77,8 +76,8 @@ body {
   background-image: url('images/Tv_hd.png');
   height: 800px;
   width: 1200px;
-/*   background-color: pink;
- */
+  margin: 0 auto;
+  margin-top: 10%;
 }
 
 #screen {
@@ -86,17 +85,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  width: 642px;
-  height: 560px;
-  margin-top: 100px;
-  margin-left: 120px;
+  width: 680px;
+  height: 580px;
+  margin-top: 95px;
+  margin-left: 104px;
   padding-left: 100px;
-  border-radius: 25px;
+  border-radius: 20px;
   list-style-type: none;
 }
 
 #top-text { /* sulcer industries */
- list-style-type: none;
  padding-left: 0px;
  padding-top: 60px;
 }
@@ -106,7 +104,10 @@ body {
   padding-top: 10px;
 }
 
-#knob {
+.power-knob {
+  color: pink;
+  z-index: 20;
+  cursor: pointer;
 }
 
 .panels {
@@ -115,9 +116,8 @@ body {
 
 .form {
   margin-top: 50px;
+  padding-top: 40px;
 }
-
-
 
 .column1 {
   float: left;
@@ -132,12 +132,9 @@ body {
   padding-left: 50px;
   z-index: 10;
   display: inline-block;
-  width: 60%;
-/*   height: 250px; */
+  width: 57%;
   cursor: pointer;
 }
-
-
 
 /* .column2 {
   float: right;
@@ -149,5 +146,5 @@ body {
 } */
 
 span:hover {
-  background: #4A1E0A;
+  background: #BE5519;
 }
