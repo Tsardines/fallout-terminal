@@ -49,30 +49,20 @@ form.addEventListener('submit', function(evt) {
 
 
 
+///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY ///// ======== //////
+let createGarbageElems = function() {
+  var shuffledGarbage = shuffle(garbage);
 
-///// ======== ////// HIGHLIGHT ///// ======== //////
-window.addEventListener('onload',function(evt) {
-  function highlight() {
-
-    var selectSpan = document.querySelector('span')
-
-    selectSpan.addEventListener("mouseover", function(evt) {
-      evt.target.style.backgroundColor = "#ebce8e";
-    });
-
-    selectSpan.addEventListener("mouseout", function(evt) {
-      evt.target.style.backgroundColor = "#472311";
-    });
-
+  for (var i = 0; i <= 18; i++) {
+    var singleTrash = document.createElement('span') // creating 'p' element, calling it singleTrash
+    singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
+    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
+    giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
   }
-highlight(evt);
-
-});
-
+}
+createGarbageElems();
 
 
-
-///// ======== ////// RANDOM WORDS, GIANT ARRAY ///// ======== //////
 var shuffledWords = shuffle(words); // randomly pick an index between 0 and 23
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -80,8 +70,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+
+///// ======== ////// RANDOM WORDS, GIANT ARRAY ///// ======== //////
 function createWordElems() {
-  for (var i = 0; i <= 23; i++) {
+  for (var i = 0; i <= 17; i++) {
     var singleWord = document.createElement('span') // creating 'p' element, calling it singleWord
     singleWord.innerHTML = " " + shuffledWords[i]; // setting the content of the first word
 
@@ -94,25 +86,23 @@ function createWordElems() {
 createWordElems();
 
 
-
-///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY ///// ======== //////
-let createGarbageElems = function() {
+///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 2 ///// ======== //////
+let createGarbageElemsTwo = function() {
   var shuffledGarbage = shuffle(garbage);
-
-  for (var i = 0; i <= 37; i++) {
+  for (var i = 12; i <= 31; i++) {
     var singleTrash = document.createElement('span') // creating 'p' element, calling it singleTrash
     singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
     var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
     giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
   }
 }
-createGarbageElems();
+createGarbageElemsTwo();
 
 
-
+///// ======== ////// RANDOM WORDS, GIANT ARRAY 2 ///// ======== //////
 function createWordElemsTwo() {
-  for (var j = 50; j <= 73; j++) {
-    var singleWord = document.createElement('span') // creating 'p' element, calling it singleWord
+  for (var j = 12; j <= 29; j++) {
+    var singleWord = document.createElement('span') // creating element, calling it singleWord
     singleWord.innerHTML = " " + shuffledWords[j]; // setting the content of the first word
 
     singleWord.addEventListener("click", clickFunc); // set onClick event for word
@@ -124,21 +114,55 @@ function createWordElemsTwo() {
 createWordElemsTwo();
 
 
+///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 3 ///// ======== //////
+let createGarbageElemsThree = function() {
+  var shuffledGarbage = shuffle(garbage);
+
+  for (var i = 18; i <= 36; i++) {
+    var singleTrash = document.createElement('span') // creating element, calling it singleTrash
+    singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
+    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
+    giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
+  }
+}
+createGarbageElemsThree();
+
+
 ///// ======== ////// GOAL WORD ///// ======== //////
 var giantArray;
 var computerChoice = function() {
-  goalWord = shuffledWords[Math.floor(Math.random() * 23)]; // use Math.random to get goal word
-
+  goalWord = shuffledWords[Math.floor(Math.random() * 29)]; // use Math.random to get goal word
 };
 
 computerChoice();
 
 
 
+
+///// ======== ////// USER WORD SELECTED and LETTERS CORRECT ///// ======== //////
+function userWordHover() {
+    var entryWord = document.createElement('span') // creating 'span' element
+    entryWord.innerHTML = "test"; // setting the content of the first word
+
+    entryWord.addEventListener("click", clickFunc); // set onClick event for word
+
+    var panels = document.querySelector('.panels')
+    screen.appendChild(entryWord);
+
+}
+userWordHover();
+
+// create div, set id to word-entry
+// have div reference goalWord
+// call compare func to append result to div
+
+
+
+
 ///// ======== ////// COMPARING GOALWORD TO USERWORD ///// ======== //////
 function clickFunc(evt) {
   if (evt.target.innerText.slice(1) === goalWord) { // need .slice method to eliminate space character
-  console.log('Welcome back' + '. ');
+  alert('Welcome back' + '. ');
   } else {
   console.log('try again');
   createAttempt();
@@ -148,21 +172,20 @@ clickFunc();
 
 
 
-
 ///// ======== ////// ATTEMPTS ///// ======== //////
 function createAttempt() {
   switch (playerAttempts) {
     case 0:
-      attempts.innerHTML = "Four attempts remaining. [] [] [] []";
+      attempts.innerHTML = "Four attempts remaining. █ █ █ █";
       break;
     case 1:
-      attempts.innerHTML = "Three attempts remaining. [] [] []<br>";
+      attempts.innerHTML = "Three attempts remaining. █ █ █<br>";
       break;
     case 2:
-      attempts.innerHTML = "Two attempts remaining. [] []<br>";
+      attempts.innerHTML = "Two attempts remaining. █ █<br>";
       break;
     case 3:
-      attempts.innerHTML = "!! Warning: Lock out pending !! []<br>";
+      attempts.innerHTML = "!! Warning: Lock out pending !! █<br>";
       break;
     default:
       attempts.innerHTML = "This terminal has been locked. Please contact your administrator.";
