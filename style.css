@@ -57,7 +57,7 @@ html {
   background-size:cover;
 }
 
-@media (min-width: 1120px), (min-height: 630px) {
+@media (min-width: 1440px), (min-height: 900px) {
     body { background-size: auto; }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -74,6 +74,9 @@ body {
 
 #monitor {
   list-style-type: none;
+  background-image: url('images/Tv_hd.png');
+  height: 800px;
+  width: 1200px;
 /*   background-color: pink;
  */
 }
@@ -82,34 +85,43 @@ body {
   background-image: url('images/no-logo-terminal.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  width: 900px;
-  height: 500px;
-  margin: 0 auto;
+  position: absolute;
+  width: 642px;
+  height: 560px;
+  margin-top: 100px;
+  margin-left: 120px;
+  padding-left: 100px;
+  border-radius: 25px;
   list-style-type: none;
 }
 
 #top-text { /* sulcer industries */
  list-style-type: none;
- padding-left: 20px;
+ padding-left: 0px;
  padding-top: 60px;
 }
 
 #attempts {
-  padding-left: 20px;
+  padding-left: 0px;
+  padding-top: 10px;
 }
 
 #knob {
 }
 
-.form {
-  text-align: center;
+.panels {
+  padding-left: 1px;
 }
+
+.form {
+  margin-top: 50px;
+}
+
+
 
 .column1 {
   float: left;
   margin-top: 30px;
-  height: 350px;
-  margin-left: 20px;
   z-index: 5;
   list-style-type: none;
 }
@@ -118,13 +130,14 @@ body {
   float: inherit;
   margin: 30px 0px 120px 0;
   padding-left: 50px;
-  padding-top: 7px;
   z-index: 10;
   display: inline-block;
-  width: 50%;
-  height: 350px;
+  width: 60%;
+/*   height: 250px; */
   cursor: pointer;
 }
+
+
 
 /* .column2 {
   float: right;
@@ -136,5 +149,5 @@ body {
 } */
 
 span:hover {
-  background: black;
+  background: #4A1E0A;
 }

@@ -53,7 +53,7 @@ form.addEventListener('submit', function(evt) {
 let createGarbageElems = function() {
   var shuffledGarbage = shuffle(garbage);
 
-  for (var i = 0; i <= 18; i++) {
+  for (var i = 0; i <= 16; i++) {
     var singleTrash = document.createElement('span') // creating 'p' element, calling it singleTrash
     singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
     var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 ///// ======== ////// RANDOM WORDS, GIANT ARRAY ///// ======== //////
 function createWordElems() {
-  for (var i = 0; i <= 17; i++) {
+  for (var i = 0; i <= 14; i++) {
     var singleWord = document.createElement('span') // creating 'p' element, calling it singleWord
     singleWord.innerHTML = " " + shuffledWords[i]; // setting the content of the first word
 
@@ -89,7 +89,7 @@ createWordElems();
 ///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 2 ///// ======== //////
 let createGarbageElemsTwo = function() {
   var shuffledGarbage = shuffle(garbage);
-  for (var i = 12; i <= 31; i++) {
+  for (var i = 12; i <= 27; i++) {
     var singleTrash = document.createElement('span') // creating 'p' element, calling it singleTrash
     singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
     var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
@@ -101,7 +101,7 @@ createGarbageElemsTwo();
 
 ///// ======== ////// RANDOM WORDS, GIANT ARRAY 2 ///// ======== //////
 function createWordElemsTwo() {
-  for (var j = 12; j <= 29; j++) {
+  for (var j = 12; j <= 26; j++) {
     var singleWord = document.createElement('span') // creating element, calling it singleWord
     singleWord.innerHTML = " " + shuffledWords[j]; // setting the content of the first word
 
@@ -118,7 +118,7 @@ createWordElemsTwo();
 let createGarbageElemsThree = function() {
   var shuffledGarbage = shuffle(garbage);
 
-  for (var i = 18; i <= 36; i++) {
+  for (var i = 18; i <= 34; i++) {
     var singleTrash = document.createElement('span') // creating element, calling it singleTrash
     singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
     var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
