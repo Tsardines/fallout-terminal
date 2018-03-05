@@ -17,11 +17,12 @@
 
     .form {
       text-align: center;
-      padding-top: 10%;
+      padding-top: 30%;
+      padding-right: 100px;
     }
 
     .button {
-      display: inline-block;
+      display: inline;
     }
 
   </style>
@@ -30,12 +31,19 @@
 
 <body>
 
-  <form class="form"> WELCOME TO SULCER INDUSTRIES <br> PLEASE ENTER YOUR FIRST NAME: <input type="textbox" class="name">
-
-      <div id="button"><a href="index.html">Go</a></div>
-  </form>
+  <div id="monitor"> <!-- level 1 -->
 
 
+
+    <div id="screen"> <!-- level 2 -->
+
+      <form class="form"> WELCOME TO SULCER INDUSTRIES (TM) <br> PLEASE ENTER YOUR FIRST NAME: <input type="textbox" class="name">
+        <div id="button"><a href="index.html" style="color:blue">SUBMIT</a></div>
+      </form>
+
+    </div>
+
+  </div>
 
   <script>
     ///// ======== ////// LANDING PAGES 1 AND 2 ///// ======== //////
@@ -45,6 +53,7 @@
       var nameInputDOMElem = document.querySelector('.name');
       console.log(nameInputDOMElem.value);
     });
+
   </script>
 
 </body>
