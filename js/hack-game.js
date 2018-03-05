@@ -126,7 +126,7 @@ computerChoice();
 function showResult(result) {
   var bottomText = document.querySelector('.bottomText');
   bottomText.setAttribute('id', 'bottomID');
-  bcountCommonCharacters();
+  // bottomText.innerHTML = "";
 }
 
 function countCommonCharacters() {
@@ -142,7 +142,7 @@ function countCommonCharacters() {
   //   count
   // );
 
-
+countCommonCharacters();
 
 showResult();
 
