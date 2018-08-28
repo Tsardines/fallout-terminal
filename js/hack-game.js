@@ -1,10 +1,14 @@
-var garbage = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "=", "+", ";", "<", ">", "/", "?", "~",
+const garbage = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "=", "+", ";", "<", ">", "/", "?", "~",
 ",", ".", "|", "¡", "¢", "£", "¥", "§", "©", "®", "µ", "¶", "¿", "Ж", "Г", "Д", "Ѱ", "ה", "ᛒ", "ᚼ"];
 // fun fact: ᛒ(Bjarkan) + ᚼ(Hagall) = Bluetooth
 
-var words = ["REAPER","TRYING","VERMIN","MISERY","CRISPY","TRUANT","ARGUES","THINKS","KILLER","LESSON","JUMPER","HOLLOW","WILLOW","MOTHER","FATHER","WRENCH","NIMBUS","RABIES","TOASTY","PULLER","TIMBER","VULGAR","BENDER","KITTEN",
+// I selected the following words from various dictionaries.
+// In the near future I plan on implementing a dictionary API
+// that'll have access to thousands of words rather than a few hundred.
+
+const words = ["REAPER","TRYING","VERMIN","MISERY","CRISPY","TRUANT","ARGUES","THINKS","KILLER","LESSON","JUMPER","HOLLOW","WILLOW","MOTHER","FATHER","WRENCH","NIMBUS","RABIES","TOASTY","PULLER","TIMBER","VULGAR","BENDER",
 "DAPPER","CHANGE","BEAKER","APPLES","ORANGE","BUILDS","FALCON","LOGGER","IDIOTS","ABROAD","ACCEPT","ACTION","MERGER","MEMORY","SALARY","SCHEME","ROBUST","SYMBOL","TALENT","WINDOW","WIDOWS","WORKER","WRITER","YELLOW","GREENS",
-"TENDER","TENNIS","RECORD","REMOVE","REMAIN","NOTICE","NOTION","STYLES","TRICKY","HAVING","DANCER","LAMBDA","KOSHER","KNEELS","KNOBBY","LAUGHS","LEGION","HUMANS","LEMONS","LYCHEE","COOKIE","PROVEN","POTTER","QUOHOQ","QUIRKY",
+"TENDER","TENNIS","RECORD","REMOVE","REMAIN","NOTICE","NOTION","STYLES","TRICKY","HAVING","DANCER","LAMBDA","KOSHER","KNEELS","KNOBBY","LAUGHS","LEGION","HUMANS","LEMONS","LYCHEE","COOKIE","PROVEN","POTTER","QUAHOQ","QUIRKY",
 "PURPLE","QUAINT","QWERTY","PREFIX","SHOJIS","SEESAW","SUBWAY","SICKLE","SIGNET","SIRENS","SEIZED","SINEWY","VIKING","WAFFLE","VELOUR","VIABLE","VIOLET","WIDELY","VELVET","WEAKEN","WIZARD","WINERY","ZEALOT","MUDCAP","MUSING",
 "MUSICS","NOMADS","MOSQUE","MONGOL","ICONIC","IMPISH","INBRED","INFLUX","INTAKE","INHALE","IMPOSE","CROWNS","CRUMBS","CREEPS","CRADLE","CRAMPY","ENIGMA","ETHYNE","EPONYM","EXPATS","FLAMES","FLAMBE","FOSSIL","FUNKER","FLORAL",
 "GRINCH","GYOZAS","NORMAL","MURDER","MARINE","FAMOUS","EXTENT","FACING","FINISH","FABRIC","CASTLE","CENTER","CARBON","FRIEND","GARDEN","GOLDEN","IMPACT","IMPORT","HEALTH","REDUCE","REASON","REGIME","RELIEF","READER","REMOTE",
@@ -12,7 +16,7 @@ var words = ["REAPER","TRYING","VERMIN","MISERY","CRISPY","TRUANT","ARGUES","THI
 "PLANET","PLENTY","PLAYER","BEAUTY","BISHOP","BOTTLE","BREATH","BRANCH","CAMERA","CARAFE","GLIDER","YEOMAN","JAGGED","ORGANS","VERMIN","CYPHER","ARCHER","FILTER","TAIKOS","TREATS","DUDUKS","VIOLIN","STAVES","BRACED","CLASSY",
 "POTATO","BANANA","ENERGY","NINETY","AFRICA","TWELVE","AUGUST","FATHER","BROKEN","SUNDAY",
 "FRIDAY","PERSON","MONKEY","CHANGE","SYSTEM","SNITCH","SPRING","SCARCE","BREATH","ANALOG","ANKLES","ANIMAS","ANGINA","ANOINT","BADASS","BADGER","BACONS","BALDED","BADDIE","BALLAD","BEZELS","BOXCAR","BOUNCY","CAMPER","CANTER",
-"CHEWER","CHITIN","CHILLS","COUGAR","DEFIES","DEFOAM","DHARMA","DINGUS","DOMINO","DRACHM","DUGONG","EERILY","ECZEMA","EXPERT","FEDORA",
+"CHEWER","CHITIN","CHILLS","COUGAR","DEFIES","DEFOAM","DHARMA","DOMINO","DRACHM","DUGONG","EERILY","ECZEMA","EXPERT","FEDORA",
 "FIDGET","FOLKSY","FOODIE","FOLEYS","GAGAKU","GIGOLO","GLUTES","HAWKEY","HAUNCH","HEEHAW","HELIUM","HIJACK","HONEYS","HORROR","ISSUER","ISOBAR","IPECAC","INTERN","INTOMB","JAGUAR","JUNKET","KABUKI","KAHUNA","KAYAKS","CARATS",
 "KARATE","KICKER","KIMONO","LANCER","LAWYER","LAZULI","LIMBIC","LOCKET","LOAVES","LUSTRE","MACULA","MADAMS","MACAWS","MAMLUK","MARACA",
 "MARBLE","MEDUSA","MIASMA","MILDLY","MIMOSA","MOCAPS","MUFFIN","DONUTS","NARCOS","NERVES","NEURON","NUTMEG","NYMPHA","OCULUS","ONYXES","OSMICS","PACING","PAGODA","PAPERY","PEGBOX","PEWTER","PHYLUM","PLANET","POBOYS","POINTY",
@@ -22,24 +26,25 @@ var words = ["REAPER","TRYING","VERMIN","MISERY","CRISPY","TRUANT","ARGUES","THI
 "HANGAR","ABACUS","ABBEYS","ACACIA","ADOBES","AFGHAN","ALLOYS","AUBURN","BABKAS","BAMBOO","BINARY","CAMELS","CHICAS","CITRUS","COCCYX","COHOST","DEBUNK","DENTAL","DINERO","DJINNI","ECHOED","EPOCHS","EXUDES","FAERIE"
 ];
 
-
-var giantArray = []; // combination of var garbage and var words
-
-var goalWord = ""; // word that the computer chose to be the "goal"  // STRING
-
-var userWord = ""; // the current word that the user selected // STRING
-
+var giantArray = []; // combination of garbage and words
+var goalWord = ""; // word that the computer chose to be the "goal"
+var userWord = ""; // the current word that the user selected
 var playerAttempts = 0; // how many past attempts the user has made
-
-
-
 var shuffledWords = shuffle(words);
 
 document.addEventListener("DOMContentLoaded", function(event) {
   createAttempt();
 });
 
+// The following segments are displayed like this onscreen:
 
+///// GARBAGE CHARACTERS /////
+       ///// random words /////
+///// GARBAGE CHARACTERS /////
+       ///// random words /////
+///// GARBAGE CHARACTERS /////
+
+// Simply put, there are three rows of garbage chars and two row of random words
 
 ///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY ///// ======== //////
 var createGarbageElems = function() {
@@ -53,39 +58,9 @@ var createGarbageElems = function() {
 }
 createGarbageElems();
 
-
-
 ///// ======== ////// RANDOM WORDS, GIANT ARRAY ///// ======== //////
 function createWordElems() {
-  for (var i = 0; i <= 14; i++) {
-    var singleWord = document.createElement('span')
-    singleWord.innerHTML = " " + shuffledWords[i]; // setting the content of the first word
-    singleWord.addEventListener("click", clickFunc); // set onClick event for word
-    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
-    giantArrayElement.appendChild(singleWord); // appending singleWord to giantArrayElement
-  }
-}
-createWordElems();
-
-
-
-///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 2 ///// ======== //////
-var createGarbageElemsTwo = function() {
-  var shuffledGarbage = shuffle(garbage);
-  for (var i = 12; i <= 27; i++) {
-    var singleTrash = document.createElement('span')
-    singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
-    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
-    giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
-  }
-}
-createGarbageElemsTwo();
-
-
-
-///// ======== ////// RANDOM WORDS, GIANT ARRAY 2 ///// ======== //////
-function createWordElemsTwo() {
-  for (var j = 15; j <= 29; j++) {
+  for (var j = 0; j <= 14; j++) {
     var singleWord = document.createElement('span')
     singleWord.innerHTML = " " + shuffledWords[j]; // setting the content of the first word
     singleWord.addEventListener("click", clickFunc); // set onClick event for word
@@ -93,23 +68,43 @@ function createWordElemsTwo() {
     giantArrayElement.appendChild(singleWord); // appending singleWord to giantArrayElement
   }
 }
+createWordElems();
+
+///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 2 ///// ======== //////
+var createGarbageElemsTwo = function() {
+  var shuffledGarbage = shuffle(garbage);
+  for (var k = 12; k <= 27; k++) {
+    var singleTrash = document.createElement('span')
+    singleTrash.innerHTML = " " + shuffledGarbage[k]; // setting the content of the first word
+    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
+    giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
+  }
+}
+createGarbageElemsTwo();
+
+///// ======== ////// RANDOM WORDS, GIANT ARRAY 2 ///// ======== //////
+function createWordElemsTwo() {
+  for (var m = 15; m <= 29; m++) {
+    var singleWord = document.createElement('span')
+    singleWord.innerHTML = " " + shuffledWords[m]; // setting the content of the first word
+    singleWord.addEventListener("click", clickFunc); // set onClick event for word
+    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
+    giantArrayElement.appendChild(singleWord); // appending singleWord to giantArrayElement
+  }
+}
 createWordElemsTwo();
-
-
 
 ///// ======== ////// GARBAGE CHARACTERS to GIANT ARRAY 3 ///// ======== //////
 var createGarbageElemsThree = function() {
   var shuffledGarbage = shuffle(garbage);
-  for (var i = 18; i <= 33; i++) {
+  for (var n = 18; n <= 33; n++) {
     var singleTrash = document.createElement('span')
-    singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
+    singleTrash.innerHTML = " " + shuffledGarbage[n]; // setting the content of the first word
     var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
     giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
   }
 }
 createGarbageElemsThree();
-
-
 
 ///// ======== ////// GOAL WORD ///// ======== //////
 var giantArray;
@@ -119,14 +114,10 @@ var giantArray;
 
 computerChoice();
 
-
-
 ///// ======== ////// CORRECT LETTERS ///// ======== //////
-
 function showResult(result) {
   var bottomText = document.querySelector('.bottomText');
   bottomText.setAttribute('id', 'bottomID');
-  // bottomText.innerHTML = "";
 }
 
 function countCommonCharacters() {
@@ -137,13 +128,8 @@ function countCommonCharacters() {
   }
   return count;
 }
-  // bottomText.addEventListener(
-  //   'click',
-  //   count
-  // );
 
 countCommonCharacters();
-
 showResult();
 
 ///// ======== ////// COMPARING GOALWORD TO USERWORD ///// ======== //////
@@ -155,11 +141,8 @@ function clickFunc(evt) {
     console.log('try again');
     createAttempt();
   }
-
   console.log(countCommonCharacters());
 }
-
-
 
 ///// ======== ////// ATTEMPTS ///// ======== //////
 function createAttempt() {
