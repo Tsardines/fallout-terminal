@@ -60,10 +60,8 @@ And here's a ![link](http://mitchellthompson.net/demos/terminal/) to a working r
 The **image below** is a more **accurate representation of the game screen** compared to the image above. Something to note---and this will be fixed---is that in the picture every line contains a word. This will **not happen** during the final game. I'd originally considered one per line but realized it complicates things.
 <img src="https://i.imgur.com/O2nTwkp.jpg" alt="alt text" width="400" height="200">
 
-<<<<<<< HEAD
 11. If the word is incorrect, the follow message appears on the right side: "Entry denied. x/6 correct."
     - With x being the amount of letters from your word that match the computer's goal word.
-
 
 ### Playing The Game
 
