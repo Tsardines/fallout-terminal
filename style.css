@@ -80,7 +80,6 @@ body {
   margin-top: 10%;
 }
 
-
 #screen {
   background-image: url('images/no-logo-terminal.jpg');
   background-size: cover;
@@ -163,5 +162,5 @@ body {
 } */
 
 span:hover {
-  background: #BE5519;
+  background: #69A524;
 }

@@ -34,12 +34,10 @@
 
   <div id="monitor"> <!-- level 1 -->
 
-
-
     <div id="screen"> <!-- level 2 -->
 
       <form class="form"> WELCOME TO SULCER INDUSTRIES (TM) <br> PLEASE ENTER YOUR FIRST NAME: <input type="textbox" class="name">
-        <div id="button"><a href="hack-game.html" style="color:blue">SUBMIT</a></div>
+        <div id="button"><a href="hack-game.html" style="color:#A8F057">SUBMIT</a></div>
       </form>
 
     </div>
@@ -48,10 +46,10 @@
 
   <script>
     ///// ======== ////// LANDING PAGE ///// ======== //////
-    var form = document.querySelector('.form')
+    const form = document.querySelector('.form')
     form.addEventListener('submit', function(evt) {
-      evt.preventDefault(); // will prevent the refresh from happening---form won't submit to another page
-      var nameInputDOMElem = document.querySelector('.name');
+      evt.preventDefault();
+      const nameInputDOMElem = document.querySelector('.name');
       console.log(nameInputDOMElem.value);
     });
 

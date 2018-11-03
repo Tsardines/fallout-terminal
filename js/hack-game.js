@@ -2,9 +2,6 @@ const garbage = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "=", "+", ";"
 ",", ".", "|", "¡", "¢", "£", "¥", "§", "©", "®", "µ", "¶", "¿", "Ж", "Г", "Д", "Ѱ", "ה", "ᛒ", "ᚼ"];
 // fun fact: ᛒ(Bjarkan) + ᚼ(Hagall) = Bluetooth
 
-// I selected the following words from various dictionaries.
-// In the near future I plan on implementing a dictionary API
-// that'll have access to thousands of words rather than a few hundred.
 
 const words = ["REAPER","TRYING","VERMIN","MISERY","CRISPY","TRUANT","ARGUES","THINKS","KILLER","LESSON","JUMPER","HOLLOW","WILLOW","MOTHER","FATHER","WRENCH","NIMBUS","RABIES","TOASTY","PULLER","TIMBER","VULGAR","BENDER",
 "DAPPER","CHANGE","BEAKER","APPLES","ORANGE","BUILDS","FALCON","LOGGER","IDIOTS","ABROAD","ACCEPT","ACTION","MERGER","MEMORY","SALARY","SCHEME","ROBUST","SYMBOL","TALENT","WINDOW","WIDOWS","WORKER","WRITER","YELLOW","GREENS",
@@ -51,9 +48,9 @@ var createGarbageElems = function() {
   var shuffledGarbage = shuffle(garbage);
   for (var i = 0; i <= 16; i++) {
     var singleTrash = document.createElement('span') // creating 'p' element, calling it singleTrash
-    singleTrash.innerHTML = " " + shuffledGarbage[i]; // setting the content of the first word
-    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
-    giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
+    singleTrash.innerHTML = " " + shuffledGarbage[i];
+    var giantArrayElement = document.querySelector('.giant-array')
+    giantArrayElement.appendChild(singleTrash);
   }
 }
 createGarbageElems();
@@ -62,10 +59,10 @@ createGarbageElems();
 function createWordElems() {
   for (var j = 0; j <= 14; j++) {
     var singleWord = document.createElement('span')
-    singleWord.innerHTML = " " + shuffledWords[j]; // setting the content of the first word
-    singleWord.addEventListener("click", clickFunc); // set onClick event for word
-    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
-    giantArrayElement.appendChild(singleWord); // appending singleWord to giantArrayElement
+    singleWord.innerHTML = " " + shuffledWords[j];
+    singleWord.addEventListener("click", clickFunc);
+    var giantArrayElement = document.querySelector('.giant-array')
+    giantArrayElement.appendChild(singleWord);
   }
 }
 createWordElems();
@@ -75,9 +72,9 @@ var createGarbageElemsTwo = function() {
   var shuffledGarbage = shuffle(garbage);
   for (var k = 12; k <= 27; k++) {
     var singleTrash = document.createElement('span')
-    singleTrash.innerHTML = " " + shuffledGarbage[k]; // setting the content of the first word
-    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
-    giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
+    singleTrash.innerHTML = " " + shuffledGarbage[k];
+    var giantArrayElement = document.querySelector('.giant-array')
+    giantArrayElement.appendChild(singleTrash);
   }
 }
 createGarbageElemsTwo();
@@ -86,10 +83,10 @@ createGarbageElemsTwo();
 function createWordElemsTwo() {
   for (var m = 15; m <= 29; m++) {
     var singleWord = document.createElement('span')
-    singleWord.innerHTML = " " + shuffledWords[m]; // setting the content of the first word
-    singleWord.addEventListener("click", clickFunc); // set onClick event for word
-    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
-    giantArrayElement.appendChild(singleWord); // appending singleWord to giantArrayElement
+    singleWord.innerHTML = " " + shuffledWords[m];
+    singleWord.addEventListener("click", clickFunc);
+    var giantArrayElement = document.querySelector('.giant-array')
+    giantArrayElement.appendChild(singleWord);
   }
 }
 createWordElemsTwo();
@@ -99,9 +96,9 @@ var createGarbageElemsThree = function() {
   var shuffledGarbage = shuffle(garbage);
   for (var n = 18; n <= 33; n++) {
     var singleTrash = document.createElement('span')
-    singleTrash.innerHTML = " " + shuffledGarbage[n]; // setting the content of the first word
-    var giantArrayElement = document.querySelector('.giant-array') // selecting .giant-array and storing it in var
-    giantArrayElement.appendChild(singleTrash); // appending singleWord to giantArrayElement
+    singleTrash.innerHTML = " " + shuffledGarbage[n];
+    var giantArrayElement = document.querySelector('.giant-array')
+    giantArrayElement.appendChild(singleTrash);
   }
 }
 createGarbageElemsThree();
